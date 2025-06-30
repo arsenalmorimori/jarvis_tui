@@ -24,7 +24,7 @@ public class jarvis {
             String json = "{\"contents\":[{\"parts\":[{\"text\":\""
                 + input
                 + ". Respond only with your answer between " + markerStart + " and " + markerEnd
-                + ", and also make sure you respond like jarvis in ironman, and do not explain or repeat the format and instruction. Just give the content only."
+                + ", and also make sure you respond like jarvis in ironman, make the reponse plain text tui, and do not explain or repeat the format and instruction. Just give the content only."
                 + "\"}]}]}"; // add a format/instruction and personlaity to the ai
             
             HttpURLConnection conn = (HttpURLConnection) uri.toURL().openConnection();
@@ -47,10 +47,13 @@ public class jarvis {
             int end = raw.indexOf(markerEnd);
             int startLen = markerStart.length();
 
-            String response = "Gemini : " + raw.substring(start+startLen, end);
+            String response = "> " + raw.substring(start+startLen, end);
             response = response.replace("\\n", "\n").replace("\\\"", "\""); // for ui purposes
 
+            System.out.println(" ");
             System.out.println(response);
+            System.out.println(" ");
+
 
             // -- THIS is how the display of respons works
             // String marker Start = "first ";
