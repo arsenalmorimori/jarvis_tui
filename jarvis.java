@@ -10,11 +10,10 @@ public class jarvis {
         String key = vr.key;
         URI uri = new URI( vr.uri + key);
         Scanner sc = new Scanner(System.in);
-
+        String input = "Helo Jarvis, sup";
+        
         // CHAT SYSTEM LOOP
         while (true) {
-            System.out.print("You: ");
-            String input = sc.nextLine();
 
             String markerStart = "*&@#*&@*#&*@&*";
             String markerEnd = "*&@*(@#*(@#*#*&@*#&*@&*";
@@ -53,6 +52,9 @@ public class jarvis {
             System.out.println(" ");
             System.out.println(response);
             System.out.println(" ");
+
+            System.out.print("You: ");
+            input = sc.nextLine();
 
 
             // -- THIS is how the display of respons works
