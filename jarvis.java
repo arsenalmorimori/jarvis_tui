@@ -42,6 +42,7 @@ public class jarvis {
 
             // -----------------------------------------------------------------------------------
 
+            // displaying the response
             int start = raw.indexOf(markerStart);
             int end = raw.indexOf(markerEnd);
             int startLen = markerStart.length();
@@ -67,6 +68,8 @@ public class jarvis {
             
             // -- OUTPUT
             // System.out.println(text.subSequence(sm.length(),sme));
+            // only display the MIDDLE part
+
         }
     }
 }
